@@ -35,7 +35,7 @@
         <script src="js/tailDT.js"></script>
 <script src="js/nouislider.min.js"></script>
 <script src="js/wNumb.js"></script>
-        <script src="data/Schools202122_1.js"></script>
+        <script src="data/Schools201516_1.js"></script>
         <script>
         var highlightLayer;
         function highlightFeature(e) {
@@ -67,7 +67,7 @@
         });
         layer_EsriGraylight_0;
         map.addLayer(layer_EsriGraylight_0);
-        function pop_Schools202122_1(feature, layer) {
+        function pop_Schools201516_1(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -82,7 +82,7 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['ST_NM'] !== null ? autolinker.link(feature.properties['ST_NM'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['st_nm'] !== null ? autolinker.link(feature.properties['st_nm'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Total</th>\
@@ -108,10 +108,10 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_Schools202122_1_0(feature) {
-            if (feature.properties['Total'] >= 38.000000 && feature.properties['Total'] <= 1500.000000 ) {
+        function style_Schools201516_1_0(feature) {
+            if (feature.properties['Total'] >= 45.000000 && feature.properties['Total'] <= 1500.000000 ) {
                 return {
-                pane: 'pane_Schools202122_1',
+                pane: 'pane_Schools201516_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -120,13 +120,13 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(240,249,232,1.0)',
+                fillColor: 'rgba(235,235,219,1.0)',
                 interactive: true,
             }
             }
             if (feature.properties['Total'] >= 1500.000000 && feature.properties['Total'] <= 15000.000000 ) {
                 return {
-                pane: 'pane_Schools202122_1',
+                pane: 'pane_Schools201516_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -135,13 +135,13 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(186,228,188,1.0)',
+                fillColor: 'rgba(157,219,178,1.0)',
                 interactive: true,
             }
             }
             if (feature.properties['Total'] >= 15000.000000 && feature.properties['Total'] <= 50000.000000 ) {
                 return {
-                pane: 'pane_Schools202122_1',
+                pane: 'pane_Schools201516_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -150,13 +150,13 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(123,204,196,1.0)',
+                fillColor: 'rgba(105,199,190,1.0)',
                 interactive: true,
             }
             }
             if (feature.properties['Total'] >= 50000.000000 && feature.properties['Total'] <= 100000.000000 ) {
                 return {
-                pane: 'pane_Schools202122_1',
+                pane: 'pane_Schools201516_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -165,13 +165,13 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(67,162,202,1.0)',
+                fillColor: 'rgba(73,160,197,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['Total'] >= 100000.000000 && feature.properties['Total'] <= 258054.000000 ) {
+            if (feature.properties['Total'] >= 100000.000000 && feature.properties['Total'] <= 255969.000000 ) {
                 return {
-                pane: 'pane_Schools202122_1',
+                pane: 'pane_Schools201516_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -180,35 +180,35 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(8,104,172,1.0)',
+                fillColor: 'rgba(11,96,187,1.0)',
                 interactive: true,
             }
             }
         }
-        map.createPane('pane_Schools202122_1');
-        map.getPane('pane_Schools202122_1').style.zIndex = 401;
-        map.getPane('pane_Schools202122_1').style['mix-blend-mode'] = 'normal';
-        var layer_Schools202122_1 = new L.geoJson(json_Schools202122_1, {
+        map.createPane('pane_Schools201516_1');
+        map.getPane('pane_Schools201516_1').style.zIndex = 401;
+        map.getPane('pane_Schools201516_1').style['mix-blend-mode'] = 'normal';
+        var layer_Schools201516_1 = new L.geoJson(json_Schools201516_1, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Schools202122_1',
-            layerName: 'layer_Schools202122_1',
-            pane: 'pane_Schools202122_1',
-            onEachFeature: pop_Schools202122_1,
-            style: style_Schools202122_1_0,
+            dataVar: 'json_Schools201516_1',
+            layerName: 'layer_Schools201516_1',
+            pane: 'pane_Schools201516_1',
+            onEachFeature: pop_Schools201516_1,
+            style: style_Schools201516_1_0,
         });
-        bounds_group.addLayer(layer_Schools202122_1);
-        map.addLayer(layer_Schools202122_1);
+        bounds_group.addLayer(layer_Schools201516_1);
+        map.addLayer(layer_Schools201516_1);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'Schools 2021-22<br /><table><tr><td style="text-align: center;"><img src="legend/Schools202122_1_3815000.png" /></td><td>38 - 1500</td></tr><tr><td style="text-align: center;"><img src="legend/Schools202122_1_1500150001.png" /></td><td>1500 - 15000</td></tr><tr><td style="text-align: center;"><img src="legend/Schools202122_1_15000500002.png" /></td><td>15000 - 50000</td></tr><tr><td style="text-align: center;"><img src="legend/Schools202122_1_500001000003.png" /></td><td>50000 - 100000</td></tr><tr><td style="text-align: center;"><img src="legend/Schools202122_1_1000002580544.png" /></td><td>100000 - 258054</td></tr></table>': layer_Schools202122_1,"Esri Gray (light)": layer_EsriGraylight_0,}).addTo(map);
+        L.control.layers(baseMaps,{'Schools 2015-16<br /><table><tr><td style="text-align: center;"><img src="legend/Schools201516_1_4515000.png" /></td><td>45 - 1500</td></tr><tr><td style="text-align: center;"><img src="legend/Schools201516_1_1500150001.png" /></td><td>1500 - 15000</td></tr><tr><td style="text-align: center;"><img src="legend/Schools201516_1_15000500002.png" /></td><td>15000 - 50000</td></tr><tr><td style="text-align: center;"><img src="legend/Schools201516_1_500001000003.png" /></td><td>50000 - 100000</td></tr><tr><td style="text-align: center;"><img src="legend/Schools201516_1_1000002559694.png" /></td><td>100000 - 255969</td></tr></table>': layer_Schools201516_1,"Esri Gray (light)": layer_EsriGraylight_0,}).addTo(map);
         setBounds();
         var i = 0;
-        layer_Schools202122_1.eachLayer(function(layer) {
+        layer_Schools201516_1.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['ST_NM'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Arial\', sans-serif;">' + layer.feature.properties['ST_NM']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Schools202122_1'});
+            layer.bindTooltip((layer.feature.properties['st_nm'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Arial\', sans-serif;">' + layer.feature.properties['st_nm']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Schools201516_1'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -234,7 +234,7 @@
         document.getElementById("all").appendChild(col1);
         document.getElementById("all").appendChild(col2);
         col1.appendChild(mapDiv)
-        var Filters = {"ST_NM": "str"};
+        var Filters = {"st_nm": "str"};
         function filterFunc() {
           map.eachLayer(function(lyr){
           if ("options" in lyr && "dataVar" in lyr["options"]){
@@ -322,12 +322,12 @@
           this[lyr["options"]["layerName"]].clearLayers();
           this[lyr["options"]["layerName"]].addData(features);
         var i = 0;
-        layer_Schools202122_1.eachLayer(function(layer) {
+        layer_Schools201516_1.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['ST_NM'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Arial\', sans-serif;">' + layer.feature.properties['ST_NM']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Schools202122_1'});
+            layer.bindTooltip((layer.feature.properties['st_nm'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Arial\', sans-serif;">' + layer.feature.properties['st_nm']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Schools201516_1'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -339,78 +339,78 @@
         }
             document.getElementById("menu").appendChild(
                 document.createElement("div"));
-            var div_ST_NM = document.createElement('div');
-            div_ST_NM.id = "div_ST_NM";
-            div_ST_NM.className= "filterselect";
-            document.getElementById("menu").appendChild(div_ST_NM);
-            sel_ST_NM = document.createElement('select');
-            sel_ST_NM.multiple = true;
-            sel_ST_NM.size = 10;
-            sel_ST_NM.id = "sel_ST_NM";
-            var ST_NM_options_str = "<option value='' unselected></option>";
-            sel_ST_NM.onchange = function(){filterFunc()};
-            ST_NM_options_str  += '<option value="Andaman & Nicobar">Andaman & Nicobar</option>';
-            ST_NM_options_str  += '<option value="Andhra Pradesh">Andhra Pradesh</option>';
-            ST_NM_options_str  += '<option value="Arunachal Pradesh">Arunachal Pradesh</option>';
-            ST_NM_options_str  += '<option value="Assam">Assam</option>';
-            ST_NM_options_str  += '<option value="Bihar">Bihar</option>';
-            ST_NM_options_str  += '<option value="Chandigarh">Chandigarh</option>';
-            ST_NM_options_str  += '<option value="Chhattisgarh">Chhattisgarh</option>';
-            ST_NM_options_str  += '<option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>';
-            ST_NM_options_str  += '<option value="Delhi">Delhi</option>';
-            ST_NM_options_str  += '<option value="Goa">Goa</option>';
-            ST_NM_options_str  += '<option value="Gujarat">Gujarat</option>';
-            ST_NM_options_str  += '<option value="Haryana">Haryana</option>';
-            ST_NM_options_str  += '<option value="Himachal Pradesh">Himachal Pradesh</option>';
-            ST_NM_options_str  += '<option value="Jammu & Kashmir">Jammu & Kashmir</option>';
-            ST_NM_options_str  += '<option value="Jharkhand">Jharkhand</option>';
-            ST_NM_options_str  += '<option value="Karnataka">Karnataka</option>';
-            ST_NM_options_str  += '<option value="Kerala">Kerala</option>';
-            ST_NM_options_str  += '<option value="Ladakh">Ladakh</option>';
-            ST_NM_options_str  += '<option value="Lakshadweep">Lakshadweep</option>';
-            ST_NM_options_str  += '<option value="Madhya Pradesh">Madhya Pradesh</option>';
-            ST_NM_options_str  += '<option value="Maharashtra">Maharashtra</option>';
-            ST_NM_options_str  += '<option value="Manipur">Manipur</option>';
-            ST_NM_options_str  += '<option value="Meghalaya">Meghalaya</option>';
-            ST_NM_options_str  += '<option value="Mizoram">Mizoram</option>';
-            ST_NM_options_str  += '<option value="Nagaland">Nagaland</option>';
-            ST_NM_options_str  += '<option value="Odisha">Odisha</option>';
-            ST_NM_options_str  += '<option value="Puducherry">Puducherry</option>';
-            ST_NM_options_str  += '<option value="Punjab">Punjab</option>';
-            ST_NM_options_str  += '<option value="Rajasthan">Rajasthan</option>';
-            ST_NM_options_str  += '<option value="Sikkim">Sikkim</option>';
-            ST_NM_options_str  += '<option value="Tamil Nadu">Tamil Nadu</option>';
-            ST_NM_options_str  += '<option value="Telangana">Telangana</option>';
-            ST_NM_options_str  += '<option value="Tripura">Tripura</option>';
-            ST_NM_options_str  += '<option value="Uttar Pradesh">Uttar Pradesh</option>';
-            ST_NM_options_str  += '<option value="Uttarakhand">Uttarakhand</option>';
-            ST_NM_options_str  += '<option value="West Bengal">West Bengal</option>';
-            sel_ST_NM.innerHTML = ST_NM_options_str;
-            div_ST_NM.appendChild(sel_ST_NM);
-            var lab_ST_NM = document.createElement('div');
-            lab_ST_NM.innerHTML = 'ST_NM';
-            lab_ST_NM.className = 'filterlabel';
-            div_ST_NM.appendChild(lab_ST_NM);
-            var reset_ST_NM = document.createElement('div');
-            reset_ST_NM.innerHTML = 'clear filter';
-            reset_ST_NM.className = 'filterlabel';
-            reset_ST_NM.onclick = function() {
-                var options = document.getElementById("sel_ST_NM").options;
+            var div_st_nm = document.createElement('div');
+            div_st_nm.id = "div_st_nm";
+            div_st_nm.className= "filterselect";
+            document.getElementById("menu").appendChild(div_st_nm);
+            sel_st_nm = document.createElement('select');
+            sel_st_nm.multiple = true;
+            sel_st_nm.size = 10;
+            sel_st_nm.id = "sel_st_nm";
+            var st_nm_options_str = "<option value='' unselected></option>";
+            sel_st_nm.onchange = function(){filterFunc()};
+            st_nm_options_str  += '<option value="Andaman & Nicobar Island">Andaman & Nicobar Island</option>';
+            st_nm_options_str  += '<option value="Andhra Pradesh">Andhra Pradesh</option>';
+            st_nm_options_str  += '<option value="Arunanchal Pradesh">Arunanchal Pradesh</option>';
+            st_nm_options_str  += '<option value="Assam">Assam</option>';
+            st_nm_options_str  += '<option value="Bihar">Bihar</option>';
+            st_nm_options_str  += '<option value="Chandigarh">Chandigarh</option>';
+            st_nm_options_str  += '<option value="Chhattisgarh">Chhattisgarh</option>';
+            st_nm_options_str  += '<option value="Dadara & Nagar Havelli">Dadara & Nagar Havelli</option>';
+            st_nm_options_str  += '<option value="Daman & Diu">Daman & Diu</option>';
+            st_nm_options_str  += '<option value="Goa">Goa</option>';
+            st_nm_options_str  += '<option value="Gujarat">Gujarat</option>';
+            st_nm_options_str  += '<option value="Haryana">Haryana</option>';
+            st_nm_options_str  += '<option value="Himachal Pradesh">Himachal Pradesh</option>';
+            st_nm_options_str  += '<option value="Jammu & Kashmir">Jammu & Kashmir</option>';
+            st_nm_options_str  += '<option value="Jharkhand">Jharkhand</option>';
+            st_nm_options_str  += '<option value="Karnataka">Karnataka</option>';
+            st_nm_options_str  += '<option value="Kerala">Kerala</option>';
+            st_nm_options_str  += '<option value="Lakshadweep">Lakshadweep</option>';
+            st_nm_options_str  += '<option value="Madhya Pradesh">Madhya Pradesh</option>';
+            st_nm_options_str  += '<option value="Maharashtra">Maharashtra</option>';
+            st_nm_options_str  += '<option value="Manipur">Manipur</option>';
+            st_nm_options_str  += '<option value="Meghalaya">Meghalaya</option>';
+            st_nm_options_str  += '<option value="Mizoram">Mizoram</option>';
+            st_nm_options_str  += '<option value="NCT of Delhi">NCT of Delhi</option>';
+            st_nm_options_str  += '<option value="Nagaland">Nagaland</option>';
+            st_nm_options_str  += '<option value="Odisha">Odisha</option>';
+            st_nm_options_str  += '<option value="Puducherry">Puducherry</option>';
+            st_nm_options_str  += '<option value="Punjab">Punjab</option>';
+            st_nm_options_str  += '<option value="Rajasthan">Rajasthan</option>';
+            st_nm_options_str  += '<option value="Sikkim">Sikkim</option>';
+            st_nm_options_str  += '<option value="Tamil Nadu">Tamil Nadu</option>';
+            st_nm_options_str  += '<option value="Telangana">Telangana</option>';
+            st_nm_options_str  += '<option value="Tripura">Tripura</option>';
+            st_nm_options_str  += '<option value="Uttar Pradesh">Uttar Pradesh</option>';
+            st_nm_options_str  += '<option value="Uttarakhand">Uttarakhand</option>';
+            st_nm_options_str  += '<option value="West Bengal">West Bengal</option>';
+            sel_st_nm.innerHTML = st_nm_options_str;
+            div_st_nm.appendChild(sel_st_nm);
+            var lab_st_nm = document.createElement('div');
+            lab_st_nm.innerHTML = 'st_nm';
+            lab_st_nm.className = 'filterlabel';
+            div_st_nm.appendChild(lab_st_nm);
+            var reset_st_nm = document.createElement('div');
+            reset_st_nm.innerHTML = 'clear filter';
+            reset_st_nm.className = 'filterlabel';
+            reset_st_nm.onclick = function() {
+                var options = document.getElementById("sel_st_nm").options;
                 for (var i=0; i < options.length; i++) {
                     options[i].selected = false;
                 }
                 filterFunc();
             };
-            div_ST_NM.appendChild(reset_ST_NM);
-        resetLabels([layer_Schools202122_1]);
+            div_st_nm.appendChild(reset_st_nm);
+        resetLabels([layer_Schools201516_1]);
         map.on("zoomend", function(){
-            resetLabels([layer_Schools202122_1]);
+            resetLabels([layer_Schools201516_1]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_Schools202122_1]);
+            resetLabels([layer_Schools201516_1]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_Schools202122_1]);
+            resetLabels([layer_Schools201516_1]);
         });
         </script>
     </body>
